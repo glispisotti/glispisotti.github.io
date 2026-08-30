@@ -1,0 +1,347 @@
+/* ------------------------------
+   BASE
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #faf7f0;
+    color: #3e3a35;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+
+.site-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+nav a {
+    opacity: 0.75;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+
+/* ------------------------------
+   HERO
+------------------------------ */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 25px;
+}
+
+.hero-symbol {
+    width: 125px;
+    height: 125px;
+
+    border: 2px solid #3e3a35;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    font-size: 3.2rem;
+}
+
+.eyebrow {
+    margin: 0 0 15px;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    opacity: 0.65;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: normal;
+    line-height: 0.95;
+}
+
+h1 em {
+    font-weight: normal;
+}
+
+.hero-text {
+    max-width: 620px;
+    margin: 35px auto;
+
+    font-size: 1.15rem;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border: 1px solid #3e3a35;
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+
+    transition: all 0.2s;
+}
+
+.button:hover {
+    background: #3e3a35;
+    color: #faf7f0;
+}
+
+
+/* ------------------------------
+   SECTIONS
+------------------------------ */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 120px 35px;
+}
+
+h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: normal;
+    line-height: 1.05;
+}
+
+.intro {
+    max-width: 650px;
+    font-size: 1.1rem;
+}
+
+
+/* ------------------------------
+   CARDS
+------------------------------ */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+.card {
+    padding: 35px;
+
+    border: 1px solid #d8d1c5;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.card p {
+    margin: 0;
+}
+
+
+/* ------------------------------
+   PROJECTS
+------------------------------ */
+
+.projects {
+    border-top: 1px solid #d8d1c5;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    margin-top: 60px;
+}
+
+.project {
+    overflow: hidden;
+
+    border-radius: 20px;
+    background: #eee9df;
+}
+
+.project-image {
+    aspect-ratio: 4 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-type {
+    margin: 0 0 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    opacity: 0.6;
+}
+
+.project h3 {
+    margin: 0 0 10px;
+
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.project p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ------------------------------
+   CONTACT
+------------------------------ */
+
+.contact {
+    padding: 140px 25px;
+
+    text-align: center;
+
+    background: #eee9df;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p:not(.eyebrow) {
+    max-width: 550px;
+    margin: 0 auto 35px;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 30px 35px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+
+    opacity: 0.6;
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 750px) {
+
+    .site-header {
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .cards,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 5px;
+        padding: 25px 20px;
+    }
+}
