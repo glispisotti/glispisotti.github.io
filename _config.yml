@@ -1,0 +1,13 @@
+title: Gli Spisotti
+description: 
+url: "https://glispisotti.github.io"
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  progetti:
+    output: true
+    permalink: /progetti/:slug/

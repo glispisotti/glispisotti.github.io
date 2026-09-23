@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<article class="project-page">
+
+    <!-- TESTATA PROGETTO -->
+    <header class="project-hero">
+
+        {% if page.categoria %}
+            <p class="eyebrow">
+                {{ page.categoria }}
+            </p>
+        {% endif %}
+
+        <h1>
+            {{ page.title }}
+        </h1>
+
+        {% if page.subtitle %}
+            <p class="project-subtitle">
+                {{ page.subtitle }}
+            </p>
+        {% endif %}
+
+    </header>
+
+
+    <!-- IMMAGINE PRINCIPALE -->
+    {% if page.image %}
+        <div class="project-cover">
+            <img
+                src="{{ page.image | relative_url }}"
+                alt="{{ page.title }}"
+            >
+        </div>
+    {% endif %}
+
+
+    <!-- CONTENUTO -->
+    <div class="project-body">
+
+        {{ content }}
+
+    </div>
+
+
+    <!-- RITORNO -->
+    <div class="project-back">
+
+        <a href="{{ '/#progetti' | relative_url }}">
+            ← Torna ai progetti
+        </a>
+
+    </div>
+
+</article>

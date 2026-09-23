@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% if page.title %}
+            {{ page.title }} — Gli Spisotti
+        {% else %}
+            Gli Spisotti — Giochi, idee e cose fatte su misura
+        {% endif %}
+    </title>
+
+    <meta name="description"
+          content="{{ page.description | default: 'Gli Spisotti inventano giochi, sorprese, piccoli siti e cose fatte su misura per occasioni speciali.' }}">
+
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+
+    {% include header.html %}
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+</body>
+</html>

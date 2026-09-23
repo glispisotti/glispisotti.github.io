@@ -1,0 +1,269 @@
+---
+layout: progetto
+title: "Cattura le carte!"
+subtitle: "ADDIO AL NUBILATO · GIOCO PERSONALIZZATO"
+description: "Un addio al nubilato trasformato in un gioco di ricordi, prove e carte da conquistare."
+permalink: /progetti/carte-sakura/
+image: "/images/progetti/carte-sakura/collage.png"
+---
+
+<p class="project-lead">
+    Un addio al nubilato ispirato al mondo delle carte magiche, in cui ogni prova nasce da un ricordo condiviso tra la futura sposa e una delle sue amiche.
+</p>
+
+
+<h2>Un addio al nubilato fatto di ricordi</h2>
+
+<p>
+    L'idea era creare qualcosa che non fosse soltanto una successione
+    di prove, ma un gioco capace di raccontare la storia della futura
+    sposa attraverso le persone che avrebbero condiviso con lei
+    quella giornata.
+</p>
+
+<p>
+    A ogni invitata è stata quindi affidata una carta.
+    Per conquistarla, la sposa avrebbe dovuto superare una prova:
+    ma nessuna delle prove è stata scelta a caso.
+</p>
+
+<p>
+    Dietro ogni carta si nascondeva un ricordo realmente vissuto
+    insieme alla persona che la custodiva.
+</p>
+
+
+<h2>Come è nato il gioco</h2>
+
+<p>
+    Tutto è partito dai ricordi.
+</p>
+
+<p>
+    Prima dell'addio al nubilato, a ogni invitata è stato chiesto
+    di raccontare un episodio, un luogo, una passione o un momento
+    particolare vissuto insieme alla futura sposa.
+</p>
+
+<p>
+    Ogni racconto è diventato il punto di partenza per costruire
+    una carta diversa: dal ricordo è nato un tema, dal tema
+    un'immagine e, infine, una prova legata a quella storia.
+</p>
+
+
+<div class="cards">
+
+    <div class="card">
+        <p class="project-type">01</p>
+        <h3>Il ricordo</h3>
+        <p>Un momento realmente vissuto insieme alla sposa.</p>
+    </div>
+
+    <div class="card">
+        <p class="project-type">02</p>
+        <h3>La carta</h3>
+        <p>Il ricordo diventa un simbolo e acquista un'identità.</p>
+    </div>
+
+    <div class="card">
+        <p class="project-type">03</p>
+        <h3>La prova</h3>
+        <p>La storia si trasforma in qualcosa da fare, ricordare o raccontare.</p>
+    </div>
+
+    <div class="card">
+        <p class="project-type">04</p>
+        <h3>La cattura</h3>
+        <p>Superata la prova, la carta entra finalmente nel mazzo.</p>
+    </div>
+
+</div>
+
+
+<h2>Undici ricordi, undici carte</h2>
+
+<p>
+    Ogni carta ha un carattere diverso perché diversa è la storia
+    da cui è nata. Insieme, però, compongono un unico racconto.
+</p>
+
+
+<div class="project-grid">
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Chaos.png' | relative_url }}"
+             alt="The Chaos">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Dance.png' | relative_url }}"
+             alt="The Dance">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Delight.png' | relative_url }}"
+             alt="The Delight">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Drawing.png' | relative_url }}"
+             alt="The Drawing">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Earth.png' | relative_url }}"
+             alt="The Earth">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Harmony.png' | relative_url }}"
+             alt="The Harmony">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Madness.png' | relative_url }}"
+             alt="The Madness">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Magic.png' | relative_url }}"
+             alt="The Magic">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Mystery.png' | relative_url }}"
+             alt="The Mystery">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Voice.png' | relative_url }}"
+             alt="The Voice">
+    </div>
+
+    <div class="project">
+        <img src="{{ '/images/progetti/carte-sakura/The Wisdom.png' | relative_url }}"
+             alt="The Wisdom">
+    </div>
+
+</div>
+
+
+<h2>Dietro ogni carta c'è una storia</h2>
+
+
+<div class="project-grid">
+
+    <div class="project">
+
+        <img src="{{ '/images/progetti/carte-sakura/The Harmony.png' | relative_url }}"
+             alt="The Harmony">
+
+        <div class="project-content">
+
+            <h3>The Harmony</h3>
+
+            <p>
+                Il punto di partenza erano anni di concerti vissuti insieme:
+                Modena City Ramblers, Teatro degli Orrori, Muro del Canto.
+            </p>
+
+            <p>
+                Quel ricordo è diventato la carta della Musica.
+                Per catturarla, la sposa avrebbe dovuto scegliere una
+                canzone e cantarla davanti alle sue compagne.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="project">
+
+        <img src="{{ '/images/progetti/carte-sakura/The Delight.png' | relative_url }}"
+             alt="The Delight">
+
+        <div class="project-content">
+
+            <h3>The Delight</h3>
+
+            <p>
+                Il ricordo erano le giornate universitarie trascorse
+                davanti ai dolci, tra esami, chiacchiere e un tiramisù
+                preparato insieme.
+            </p>
+
+            <p>
+                È nata così la carta della Dolcezza.
+                La prova consisteva nell'assaggiare un dolce e
+                riconoscerne gli ingredienti.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="project">
+
+        <img src="{{ '/images/progetti/carte-sakura/The Magic.png' | relative_url }}"
+             alt="The Magic">
+
+        <div class="project-content">
+
+            <h3>The Magic</h3>
+
+            <p>
+                Una giornata trascorsa insieme agli Studios di Harry Potter
+                ha dato vita alla carta della Magia.
+            </p>
+
+            <p>
+                Per conquistarla, la sposa doveva evocare il proprio
+                personale <em>Expecto Patronum</em>: scegliere un ricordo
+                felice e raccontarlo alle sue amiche.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<h2>Alla fine, un mazzo che racconta una storia</h2>
+
+<p>
+    Carta dopo carta, le prove hanno ricostruito piccoli pezzi
+    della vita della sposa: amicizie, viaggi, passioni,
+    figuracce, concerti e momenti apparentemente insignificanti
+    diventati ricordi da conservare.
+</p>
+
+<p>
+    Il risultato non è stato soltanto un gioco per un addio al
+    nubilato, ma un mazzo costruito intorno a una persona e alle
+    storie di chi le vuole bene.
+</p>
+
+
+<h2>Vuoi trasformare i vostri ricordi in un gioco?</h2>
+
+<p>
+    Ogni gruppo ha le proprie storie, i propri tormentoni,
+    i propri viaggi e quei momenti che fanno ridere soltanto
+    chi c'era.
+</p>
+
+<p>
+    Possiamo partire proprio da lì per creare un gioco
+    personalizzato per un addio al nubilato, un compleanno
+    o un'altra occasione speciale.
+</p>
+
+<p>
+    <a class="button" href="{{ '/contatti/' | relative_url }}">
+        Raccontaci la tua idea
+    </a>
+</p>
