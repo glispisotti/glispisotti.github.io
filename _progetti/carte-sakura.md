@@ -53,31 +53,28 @@ image: "/images/progetti/carte-sakura/collage.png"
 
 
 <div class="cards">
-
     <div class="card">
         <p class="project-type">01</p>
         <h3>Il ricordo</h3>
         <p>Un momento realmente vissuto insieme alla sposa.</p>
     </div>
-
     <div class="card">
         <p class="project-type">02</p>
         <h3>La carta</h3>
         <p>Il ricordo diventa un simbolo e acquista un'identità.</p>
     </div>
-
+</div>
+<div class="cards">
     <div class="card">
         <p class="project-type">03</p>
         <h3>La prova</h3>
         <p>La storia si trasforma in qualcosa da fare, ricordare o raccontare.</p>
     </div>
-
     <div class="card">
         <p class="project-type">04</p>
         <h3>La cattura</h3>
         <p>Superata la prova, la carta entra finalmente nel mazzo.</p>
     </div>
-
 </div>
 
 
@@ -89,148 +86,122 @@ image: "/images/progetti/carte-sakura/collage.png"
 </p>
 
 
-<div class="project-grid">
-
+<div class="project-grid" style="grid-template-columns: repeat(4, 1fr)">
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Chaos.png' | relative_url }}"
              alt="The Chaos">
     </div>
-
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Dance.png' | relative_url }}"
              alt="The Dance">
     </div>
-
-    <div class="project">
-        <img src="{{ '/images/progetti/carte-sakura/The Delight.png' | relative_url }}"
-             alt="The Delight">
-    </div>
-
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Drawing.png' | relative_url }}"
              alt="The Drawing">
     </div>
-
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Earth.png' | relative_url }}"
              alt="The Earth">
     </div>
-
-    <div class="project">
-        <img src="{{ '/images/progetti/carte-sakura/The Harmony.png' | relative_url }}"
-             alt="The Harmony">
-    </div>
-
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Madness.png' | relative_url }}"
              alt="The Madness">
     </div>
-
-    <div class="project">
-        <img src="{{ '/images/progetti/carte-sakura/The Magic.png' | relative_url }}"
-             alt="The Magic">
-    </div>
-
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Mystery.png' | relative_url }}"
              alt="The Mystery">
     </div>
-
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Voice.png' | relative_url }}"
              alt="The Voice">
     </div>
-
     <div class="project">
         <img src="{{ '/images/progetti/carte-sakura/The Wisdom.png' | relative_url }}"
              alt="The Wisdom">
     </div>
-
 </div>
 
-
 <h2>Dietro ogni carta c'è una storia</h2>
+<p>
+    Ogni carta del mazzo nasceva da un ricordo, da un episodio condiviso
+    o da qualcosa capace di raccontare un pezzo della storia della sposa.
+    A quel ricordo veniva poi associata una prova, pensata per trasformarlo
+    in un piccolo momento da vivere insieme.
+</p>
 
-
+<p>
+    Queste tre carte sono solo alcuni esempi del funzionamento del mazzo.
+</p>
 <div class="project-grid">
-
     <div class="project">
-
         <img src="{{ '/images/progetti/carte-sakura/The Harmony.png' | relative_url }}"
              alt="The Harmony">
-
         <div class="project-content">
-
             <h3>The Harmony</h3>
-
             <p>
                 Il punto di partenza erano anni di concerti vissuti insieme:
                 Modena City Ramblers, Teatro degli Orrori, Muro del Canto.
             </p>
-
             <p>
                 Quel ricordo è diventato la carta della Musica.
                 Per catturarla, la sposa avrebbe dovuto scegliere una
                 canzone e cantarla davanti alle sue compagne.
             </p>
-
         </div>
-
     </div>
-
-
     <div class="project">
-
         <img src="{{ '/images/progetti/carte-sakura/The Delight.png' | relative_url }}"
              alt="The Delight">
-
         <div class="project-content">
-
             <h3>The Delight</h3>
-
             <p>
                 Il ricordo erano le giornate universitarie trascorse
                 davanti ai dolci, tra esami, chiacchiere e un tiramisù
                 preparato insieme.
             </p>
-
             <p>
                 È nata così la carta della Dolcezza.
                 La prova consisteva nell'assaggiare un dolce e
                 riconoscerne gli ingredienti.
             </p>
-
         </div>
-
     </div>
-
-
     <div class="project">
-
         <img src="{{ '/images/progetti/carte-sakura/The Magic.png' | relative_url }}"
              alt="The Magic">
-
         <div class="project-content">
-
             <h3>The Magic</h3>
-
             <p>
                 Una giornata trascorsa insieme agli Studios di Harry Potter
                 ha dato vita alla carta della Magia.
             </p>
-
             <p>
                 Per conquistarla, la sposa doveva evocare il proprio
                 personale <em>Expecto Patronum</em>: scegliere un ricordo
                 felice e raccontarlo alle sue amiche.
             </p>
-
         </div>
-
     </div>
 
 </div>
 
+<h2>Com'era fatta una carta completa</h2>
+
+<p>
+    Oltre all'illustrazione, ogni carta era accompagnata da un testo
+    scritto appositamente: una breve narrazione che richiamava il ricordo
+    condiviso e introduceva la prova da superare.
+</p>
+
+<p>
+    Qui sotto un esempio completo, con carta e testo così come venivano
+    presentati durante il gioco.
+</p>
+
+<div class="full-card-example">
+    <img src="{{ '/images/progetti/carte-sakura/TestoTr.png' | relative_url }}"
+         alt="Esempio completo della carta The Harmony con il suo testo">
+</div>
 
 <h2>Alla fine, un mazzo che racconta una storia</h2>
 

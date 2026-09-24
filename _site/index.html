@@ -22,7 +22,8 @@
     <header class="site-header">
 
     <a href="/" class="logo">
-        GLI SPISOTTI
+        <img src="/images/LogoSenzaScritta.png" alt="Logo Gli Spisotti">
+        <span>GLI SPISOTTI</span>
     </a>
 
     <nav>
@@ -38,10 +39,10 @@
 <section class="hero">
 
     <div class="hero-symbol">
-        <span>🐈</span>
+        <img src="/images/LogoConScritta.png" style="max-width: 200px;">
     </div>
 
-    <p class="eyebrow">Giochi · idee · cose fatte su misura</p>
+    <p class="eyebrow" style="margin-top: 30px;">Giochi · idee · cose fatte su misura</p>
 
     <h1>
         Hai un'idea?<br>
@@ -78,7 +79,7 @@
     </p>
 
 
-    <div class="cards">
+    <div class="cards" style="grid-template-columns: repeat(3, 1fr)">
 
         <article class="card">
 
@@ -138,38 +139,42 @@
     </h2>
 
 
-    <div class="project-grid">
-
+    <div class="cards" style="grid-template-columns: repeat(3, 1fr)">
+        <a href="/progetti/carte-sakura/" class="card-link">
         <!-- CARTE SAKURA -->
-        <article class="project">
+            <article class="card">
 
-            <div class="project-image placeholder">
-                <span>🌸</span>
-            </div>
+                <div class="project-image placeholder">
+                    <span>🌸</span>
+                </div>
 
-            <div class="project-content">
+                <div class="project-content">
 
-                <p class="project-type">
-                    Addio al nubilato
-                </p>
+                    <p class="project-type">
+                        Addio al nubilato
+                    </p>
 
-                <h3>
-                    Un gioco di carte ispirato a Sakura
-                </h3>
+                    <h3>
+                        Un gioco di carte ispirato a Sakura
+                    </h3>
 
-                <p>
-                    Un set di carte creato su misura,
-                    con un'estetica precisa e un gioco
-                    costruito intorno alla festeggiata.
-                </p>
+                    <p>
+                        Un set di carte creato su misura,
+                        con un'estetica precisa e un gioco
+                        costruito intorno alla festeggiata.
+                    </p>
 
-            </div>
+                    <p class="project-more">
+                        Scopri di più →
+                    </p>
 
-        </article>
+                </div>
 
+            </article>
+        </a>
 
         <!-- CACCIA AL TESORO -->
-        <article class="project">
+        <article class="card">
 
             <div class="project-image placeholder">
                 <span>🗺️</span>
@@ -196,7 +201,7 @@
 
 
         <!-- MATRIMONIO -->
-        <article class="project">
+        <article class="card">
 
             <div class="project-image placeholder">
                 <span>💍</span>
@@ -247,8 +252,14 @@
     </main>
 
     <footer>
-    <p>© Gli Spisotti</p>
-    <p>Fatto con idee, gatti e un po' di ostinazione.</p>
+    <div class="footer-left">
+        <img src="/images/LogoSenzaScritta.png" alt="Gli Spisotti">
+        <p>© Gli Spisotti</p>
+    </div>
+
+    <p class="footer-right">
+        Fatto con idee, gatti e un po' di ostinazione.
+    </p>
 </footer>
 
 </body>
