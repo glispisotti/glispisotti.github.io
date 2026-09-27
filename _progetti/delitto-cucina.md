@@ -9,7 +9,7 @@ preview: "Un'indagine gastronomica per una neolaureata"
 text: "Una poliziotta romana, una laurea in giurisprudenza e una passione per la cucina. Gli indizi per aprire un caso c'erano tutti."
 position: "1010"
 tipi:
-  - grafica
+  - giochi
 usi:
   - feste
   - regalo
