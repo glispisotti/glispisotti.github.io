@@ -8,7 +8,7 @@ image: "/images/progetti/carte-sakura/collage.png"
 preview: "Un gioco di carte ispirato a Sakura"
 cover: "/images/progetti/carte-sakura/copertina.png"
 text: "Un mazzo creato da zero per un addio al nubilato: personaggi, illustrazioni e regole costruiti intorno alla festeggiata."
-position: "10"
+position: "0010"
 tipi:
   - giochi
 usi:

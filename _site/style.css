@@ -346,6 +346,12 @@ h3 {
     margin-bottom: 0;
 }
 
+.project-img-small {
+    display: block;
+    max-width: 350px;
+    height: auto;
+    margin: 45px auto;
+}
 /* ------------------------------
    OCCASIONS
 ------------------------------ */
@@ -506,13 +512,16 @@ footer p {
 
 .project-body img {
     display: block;
-
     width: 100%;
     height: auto;
-
     margin: 45px 0;
-
     border-radius: 15px;
+}
+
+.project-body img.project-img-small {
+    width: 45%;
+    height: auto;
+    margin: 45px auto;
 }
 
 .project-back {
@@ -555,6 +564,10 @@ footer p {
 ------------------------------ */
 
 @media (max-width: 750px) {
+
+    .project-body img.project-img-small {
+        width: 80%;
+    }
 
     .project-hero {
         grid-template-columns: repeat(1, 1fr);

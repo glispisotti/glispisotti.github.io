@@ -7,7 +7,7 @@ image: /images/progetti/vuoi-fare-un-gioco-con-me/collage.png
 cover: "/images/progetti/vuoi-fare-un-gioco-con-me/preview.jpg"
 text: "Doveva essere un saluto. È diventato un gioco lungo due settimane, con quindici persone, altrettanti enigmi e un regalo da conquistare."
 preview: "Una caccia al tesoro lunga due settimane"
-position: "60"
+position: "0070"
 tipi:
   - giochi
 

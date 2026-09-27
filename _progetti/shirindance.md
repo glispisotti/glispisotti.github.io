@@ -7,7 +7,7 @@ image: /images/progetti/shirindance/copertina.png
 cover: "/images/progetti/shirindance/preview.png"
 preview: "Un sito per raccontare una compagnia di danza"
 text: "Spettacoli, fotografie, video, notizie e memoria: il sito di Shirin Dance è diventato nel tempo anche l'archivio digitale della compagnia."
-position: "30"
+position: "0060"
 tipi:
   - digitale
 usi:

@@ -7,7 +7,7 @@ image: /images/progetti/badgego/collage.png
 cover: "/images/progetti/badgego/preview.png"
 text: "Doveva essere un semplice marcatempo. Poi sono arrivati progetti, attività, comunicazioni e riepiloghi. E ha cominciato a crescere."
 preview: "Un gestionale nato su misura"
-position: "30"
+position: "0030"
 tipi:
   - digitale
 
