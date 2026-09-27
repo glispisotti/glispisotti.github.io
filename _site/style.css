@@ -231,7 +231,6 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 60px;
-    align-items: start;
 }
 
 .project {
@@ -462,7 +461,7 @@ footer p {
 @media (max-width: 750px) {
 
     .project-hero {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
         gap: 25px;
     }
 
@@ -488,7 +487,7 @@ footer p {
 
     .cards,
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     footer {
