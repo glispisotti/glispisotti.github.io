@@ -6,6 +6,8 @@ permalink: /progetti/badgego/
 image: /images/progetti/badgego/collage.png
 position: "30"
 cover: "/images/progetti/badgego/preview.png"
+text: "Doveva essere un semplice marcatempo. Poi sono arrivati progetti, attività, comunicazioni e riepiloghi. E ha cominciato a crescere."
+preview: "Un gestionale nato su misura"
 ---
 
 <p class="project-lead">
@@ -25,19 +27,19 @@ Così è nato BadgeGO.
 
   <div class="project">
     <img
-      src="{{ '/images/progetti/badgego/badge.png' | relative_url }}"
+      src="{{ '/images/progetti/badgego/home.jpg' | relative_url }}"
       alt="La schermata principale di BadgeGO">
   </div>
 
   <div class="project">
     <img
-      src="{{ '/images/progetti/badgego/comunicazioni.png' | relative_url }}"
+      src="{{ '/images/progetti/badgego/comunicazioni.jpg' | relative_url }}"
       alt="La sezione comunicazioni di BadgeGO">
   </div>
 
   <div class="project">
     <img
-      src="{{ '/images/progetti/badgego/calendario.png' | relative_url }}"
+      src="{{ '/images/progetti/badgego/riepilogo.jpg' | relative_url }}"
       alt="Il calendario di BadgeGO">
   </div>
 

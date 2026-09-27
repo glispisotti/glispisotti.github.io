@@ -44,7 +44,7 @@ description: Giochi, sorprese, piccoli siti e altre cose inventate dagli Spisott
                     {% endif %}
 
 
-                    <div class="project-content">
+                    <div class="project-content" style="text-align: center;">
 
                         <h3>
                             {{ progetto.title }}
@@ -59,6 +59,13 @@ description: Giochi, sorprese, piccoli siti e altre cose inventate dagli Spisott
 
                         {% endif %}
 
+                        {% if progetto.text %}
+
+                            <p>
+                                {{ progetto.text }}
+                            </p>
+
+                        {% endif %}
 
                         <p class="project-more">
                             Scopri di più →
