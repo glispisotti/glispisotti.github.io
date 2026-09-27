@@ -5,6 +5,9 @@ subtitle: "ADDIO AL NUBILATO · GIOCO PERSONALIZZATO"
 description: "Un addio al nubilato trasformato in un gioco di ricordi, prove e carte da conquistare."
 permalink: /progetti/carte-sakura/
 image: "/images/progetti/carte-sakura/collage.png"
+preview: "Addio al nubilato - gioco personalizzato"
+cover: "/images/progetti/carte-sakura/copertina.png"
+position: "10"
 ---
 
 <p class="project-lead">

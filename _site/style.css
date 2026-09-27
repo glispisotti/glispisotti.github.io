@@ -266,6 +266,57 @@ h2 {
     font-size: 4rem;
 }
 
+.project-card-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.project-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.project-card {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-preview-image {
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 15px;
+    margin: 5px 5px 5px;
+}
+
+.project-preview-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-card .project-content {
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card .project-more {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
 .project-content {
     padding: 25px;
 }
@@ -470,11 +521,16 @@ footer p {
     }
 
     .site-header {
+        flex-direction: column;
+        gap: 15px;
         padding: 20px;
     }
 
     nav {
-        display: none;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .hero {

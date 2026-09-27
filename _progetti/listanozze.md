@@ -4,6 +4,8 @@ title: "Una lista nozze a fumetti"
 description: "Una lista nozze raccontata come un fumetto."
 permalink: /progetti/listanozze/
 image: /images/progetti/listanozze/collage.png
+position: "40"
+cover: "/images/progetti/listanozze/preview.png"
 ---
 
 <p class="project-lead">
