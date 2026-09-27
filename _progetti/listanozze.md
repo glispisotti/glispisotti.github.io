@@ -8,6 +8,10 @@ cover: "/images/progetti/listanozze/preview.png"
 preview: "Una lista nozze che era anche un sito"
 text: "Nel 2010 una lista nozze online non era proprio la norma. Così ne abbiamo costruita una, insieme al sito del matrimonio."
 position: "40"
+tipi:
+  - digitale
+usi:
+  - matrimonio
 ---
 
 <p class="project-lead">

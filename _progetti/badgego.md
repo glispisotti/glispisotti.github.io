@@ -4,10 +4,16 @@ title: "BadgeGO"
 description: "Una piccola web app interna, costruita intorno alle esigenze di chi la usa."
 permalink: /progetti/badgego/
 image: /images/progetti/badgego/collage.png
-position: "30"
 cover: "/images/progetti/badgego/preview.png"
 text: "Doveva essere un semplice marcatempo. Poi sono arrivati progetti, attività, comunicazioni e riepiloghi. E ha cominciato a crescere."
 preview: "Un gestionale nato su misura"
+position: "30"
+tipi:
+  - digitale
+
+usi:
+  - organizzazione
+  - gruppi
 ---
 
 <p class="project-lead">
@@ -113,7 +119,7 @@ E, soprattutto, sono emerse nuove esigenze nell'uso quotidiano.
 BadgeGO ha così iniziato a trasformarsi da semplice badge virtuale in un piccolo punto di accesso agli strumenti interni.
 
 
-<div class="cards">
+<div class="project-grid">
 
   <div class="card">
     <h3>Badge</h3>
