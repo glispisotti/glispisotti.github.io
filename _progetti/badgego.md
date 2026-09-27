@@ -12,7 +12,7 @@ tipi:
   - digitale
 
 usi:
-  - organizzazione
+  - attivita
   - gruppi
 ---
 

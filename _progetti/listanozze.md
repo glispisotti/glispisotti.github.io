@@ -12,6 +12,7 @@ tipi:
   - digitale
 usi:
   - matrimonio
+  - evento
 ---
 
 <p class="project-lead">
