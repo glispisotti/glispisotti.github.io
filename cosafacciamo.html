@@ -5,6 +5,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 ---
 
 <!-- INTRO -->
+
 <section class="section">
 
     <p class="eyebrow">Cosa facciamo</p>
@@ -26,6 +27,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
 <!-- COSA POSSIAMO CREARE -->
+
 <section class="section">
 
     <p class="eyebrow">Cosa possiamo inventare</p>
@@ -37,6 +39,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
     <div class="project-grid">
 
         <!-- GIOCHI -->
+
         <article class="card">
 
             <div class="card-icon">🎲</div>
@@ -55,7 +58,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             {% if progetti_giochi.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?tipo=giochi' | relative_url }}"
+                    href="{{ '/progetti.html?tipo=giochi' | relative_url }}"
                     class="project-more">
                     Guarda i progetti →
                 </a>
@@ -66,6 +69,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- DIGITALE -->
+
         <article class="card">
 
             <div class="card-icon">💻</div>
@@ -85,7 +89,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             {% if digitali.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?tipo=digitale' | relative_url }}"
+                    href="{{ '/progetti.html?tipo=digitale' | relative_url }}"
                     class="project-more">
                     Guarda i progetti →
                 </a>
@@ -96,6 +100,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- IDEE STRANE -->
+
         <article class="card">
 
             <div class="card-icon">✨</div>
@@ -115,7 +120,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             {% if progetti_idee.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?tipo=idee' | relative_url }}"
+                    href="{{ '/progetti.html?tipo=idee' | relative_url }}"
                     class="project-more">
                     Guarda i progetti →
                 </a>
@@ -130,6 +135,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
 <!-- OCCASIONI -->
+
 <section class="section projects">
 
     <p class="eyebrow">Da dove possiamo partire?</p>
@@ -148,6 +154,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- COMPLEANNO -->
+
         <article class="occasion-card">
 
             <div class="card-icon">🎂</div>
@@ -163,12 +170,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Giochi · Esperienze
             </p>
+
             {% assign progetti_compleanno = site.progetti | where_exp: "p", "p.usi contains 'compleanno'" %}
 
-            {% if compleanno.size > 0 %}
+            {% if progetti_compleanno.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=compleanno' | relative_url }}"
+                    href="{{ '/progetti.html?uso=compleanno' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -179,6 +187,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- BAMBINI -->
+
         <article class="occasion-card">
 
             <div class="card-icon">🧸</div>
@@ -195,12 +204,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Giochi · Esperienze
             </p>
+
             {% assign progetti_bambini = site.progetti | where_exp: "p", "p.usi contains 'bambini'" %}
 
             {% if progetti_bambini.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=bambini' | relative_url }}"
+                    href="{{ '/progetti.html?uso=bambini' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -211,6 +221,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- NATALE -->
+
         <article class="occasion-card">
 
             <div class="card-icon">🎄</div>
@@ -227,12 +238,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Giochi · Digitale
             </p>
+
             {% assign progetti_natale = site.progetti | where_exp: "p", "p.usi contains 'natale'" %}
 
             {% if progetti_natale.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=natale' | relative_url }}"
+                    href="{{ '/progetti.html?uso=natale' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -243,6 +255,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- REGALO -->
+
         <article class="occasion-card">
 
             <div class="card-icon">🎁</div>
@@ -258,12 +271,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Giochi · Idee strane
             </p>
+
             {% assign progetti_regalo = site.progetti | where_exp: "p", "p.usi contains 'regalo'" %}
 
             {% if progetti_regalo.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=regalo' | relative_url }}"
+                    href="{{ '/progetti.html?uso=regalo' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -274,6 +288,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- FESTE -->
+
         <article class="occasion-card">
 
             <div class="card-icon">🥂</div>
@@ -290,12 +305,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Giochi · Esperienze
             </p>
+
             {% assign progetti_feste = site.progetti | where_exp: "p", "p.usi contains 'feste'" %}
 
             {% if progetti_feste.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=feste' | relative_url }}"
+                    href="{{ '/progetti.html?uso=feste' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -304,7 +320,9 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
         </article>
 
+
         <!-- MATRIMONIO -->
+
         <article class="occasion-card">
 
             <div class="card-icon">💍</div>
@@ -321,12 +339,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Siti · Giochi · Digitale
             </p>
+
             {% assign progetti_matrimonio = site.progetti | where_exp: "p", "p.usi contains 'matrimonio'" %}
 
             {% if progetti_matrimonio.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=matrimonio' | relative_url }}"
+                    href="{{ '/progetti.html?uso=matrimonio' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -337,6 +356,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- COLLEGHI -->
+
         <article class="occasion-card">
 
             <div class="card-icon">👋</div>
@@ -353,12 +373,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Giochi · Esperienze
             </p>
+
             {% assign progetti_colleghi = site.progetti | where_exp: "p", "p.usi contains 'colleghi'" %}
 
             {% if progetti_colleghi.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=colleghi' | relative_url }}"
+                    href="{{ '/progetti.html?uso=colleghi' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -369,6 +390,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- GRUPPI -->
+
         <article class="occasion-card">
 
             <div class="card-icon">👥</div>
@@ -385,21 +407,24 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Web app · Strumenti digitali
             </p>
+
             {% assign progetti_gruppi = site.progetti | where_exp: "p", "p.usi contains 'gruppi'" %}
 
             {% if progetti_gruppi.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=gruppi' | relative_url }}"
+                    href="{{ '/progetti.html?uso=gruppi' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
 
             {% endif %}
+
         </article>
 
 
         <!-- PICCOLE ATTIVITÀ -->
+
         <article class="occasion-card">
 
             <div class="card-icon">🏡</div>
@@ -416,12 +441,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Siti · Web app
             </p>
+
             {% assign progetti_attivita = site.progetti | where_exp: "p", "p.usi contains 'attivita'" %}
 
             {% if progetti_attivita.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=attivita' | relative_url }}"
+                    href="{{ '/progetti.html?uso=attivita' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -432,6 +458,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- EVENTO / GRUPPO -->
+
         <article class="occasion-card">
 
             <div class="card-icon">📅</div>
@@ -447,12 +474,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Siti · Web app · Esperienze
             </p>
+
             {% assign progetti_evento = site.progetti | where_exp: "p", "p.usi contains 'evento'" %}
 
             {% if progetti_evento.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=evento' | relative_url }}"
+                    href="{{ '/progetti.html?uso=evento' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -463,6 +491,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- PASSIONE -->
+
         <article class="occasion-card">
 
             <div class="card-icon">❤️</div>
@@ -479,12 +508,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Siti · Digitale
             </p>
+
             {% assign progetti_passione = site.progetti | where_exp: "p", "p.usi contains 'passione'" %}
 
             {% if progetti_passione.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=passione' | relative_url }}"
+                    href="{{ '/progetti.html?uso=passione' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -495,6 +525,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
         <!-- ALTRO -->
+
         <article class="occasion-card">
 
             <div class="card-icon">💡</div>
@@ -510,12 +541,13 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
             <p class="occasion-tags">
                 Idee strane · Molto volentieri
             </p>
+
             {% assign progetti_altro = site.progetti | where_exp: "p", "p.usi contains 'altro'" %}
 
             {% if progetti_altro.size > 0 %}
 
                 <a
-                    href="{{ '/progetti/?uso=altro' | relative_url }}"
+                    href="{{ '/progetti.html?uso=altro' | relative_url }}"
                     class="occasion-more">
                     Guarda qualche esempio →
                 </a>
@@ -530,6 +562,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
 <!-- COME FUNZIONA -->
+
 <section class="section">
 
     <p class="eyebrow">Come funziona</p>
@@ -555,6 +588,7 @@ description: Giochi personalizzati, piccoli siti, web app e idee su misura per p
 
 
 <!-- CONTATTO -->
+
 <section class="contact">
 
     <p class="eyebrow">Hai già qualcosa in mente?</p>
