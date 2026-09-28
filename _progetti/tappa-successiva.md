@@ -1,7 +1,7 @@
 ---
 layout: progetto
 title: "La Tappa Successiva"
-description: "Una procedura straordinariamente burocratica per autorizzare una collega ad andarsene."
+description: "Una procedura straordinariamente burocratica per autorizzare una collega ad andarsene. Regalo personalizzato"
 permalink: /progetti/tappa-successiva/
 image: /images/progetti/tappa-successiva/collage.png
 cover: "/images/progetti/tappa-successiva/preview.png"

@@ -1,7 +1,7 @@
 ---
 layout: progetto
 title: "Shirin Dance"
-description: "Il sito web di una compagnia di danza."
+description: "Il sito web di una compagnia di danza, con news, fotogallery, appuntamenti, corsi, newsletter."
 permalink: /progetti/shirindance/
 image: /images/progetti/shirindance/copertina.png
 cover: "/images/progetti/shirindance/preview.png"

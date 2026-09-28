@@ -1,7 +1,7 @@
 ---
 layout: progetto
 title: "Il delitto della cucina capitolina"
-description: "Un'indagine gastronomica per una festa di laurea."
+description: "Un'indagine gastronomica personalizzata per una festa di laurea."
 permalink: /progetti/delitto-cucina-capitolina/
 image: /images/progetti/delitto-cucina/collage.png
 cover: "/images/progetti/delitto-cucina/preview.png"

@@ -1,7 +1,7 @@
 ---
 layout: progetto
 title: "Una lista nozze a fumetti"
-description: "Una lista nozze raccontata come un fumetto."
+description: "Una lista nozze raccontata come un fumetto, totalmente personalizzata sugli sposi."
 permalink: /progetti/listanozze/
 image: /images/progetti/listanozze/collage.png
 cover: "/images/progetti/listanozze/preview.png"
