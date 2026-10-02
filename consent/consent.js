@@ -748,7 +748,7 @@
                     <button
                         type="button"
                         class="spisotti-consent-button
-                               spisotti-consent-button-secondary"
+                               spisotti-consent-button-primary"
                         data-action="reject">
 
                         Rifiuta tutto
@@ -770,7 +770,7 @@
                     <button
                         type="button"
                         class="spisotti-consent-button
-                               spisotti-consent-button-secondary"
+                               spisotti-consent-button-primary"
                         data-action="accept">
 
                         Accetta tutto
