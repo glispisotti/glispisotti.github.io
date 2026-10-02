@@ -74,6 +74,36 @@
 
 
     /* =====================================================
+    YOUTUBE
+    ===================================================== */
+
+    function initYouTube() {
+
+        const videos = document.querySelectorAll(
+            ".spisotti-youtube"
+        );
+
+        videos.forEach(function (video) {
+
+            const videoId = video.dataset.video;
+
+            if (!videoId) {
+                console.warn(
+                    "Spisotti Consent: video YouTube senza data-video."
+                );
+                return;
+            }
+
+            console.log(
+                "Spisotti Consent: trovato video YouTube:",
+                videoId
+            );
+
+        });
+
+    }
+
+    /* =====================================================
        API PUBBLICA
     ===================================================== */
 
@@ -86,5 +116,12 @@
         set: setConsent
 
     };
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+            initYouTube();
+        }
+    );
 
 })();
