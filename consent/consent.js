@@ -197,6 +197,122 @@
     }
 
     /* =====================================================
+    BANNER CONSENSO
+    ===================================================== */
+
+    function showConsentBanner() {
+
+        // Se YouTube ha già una scelta,
+        // non dobbiamo mostrare il banner.
+        if (getServiceConsent("youtube") !== null) {
+            return;
+        }
+
+        const banner = document.createElement("div");
+
+        banner.id = "spisotti-consent-banner";
+
+        banner.innerHTML = `
+            <div class="spisotti-consent-banner-content">
+
+                <h2>Preferenze privacy</h2>
+
+                <p>
+                    Questo sito utilizza contenuti esterni che
+                    possono comportare il trattamento di dati
+                    da parte di terze parti.
+                </p>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        id="spisotti-consent-youtube">
+                    Consenti YouTube
+                </label>
+
+                <div class="spisotti-consent-buttons">
+
+                    <button
+                        type="button"
+                        id="spisotti-consent-reject">
+                        Rifiuta tutto
+                    </button>
+
+                    <button
+                        type="button"
+                        id="spisotti-consent-save">
+                        Salva preferenze
+                    </button>
+
+                    <button
+                        type="button"
+                        id="spisotti-consent-accept">
+                        Accetta tutto
+                    </button>
+
+                </div>
+
+            </div>
+        `;
+
+        document.body.appendChild(banner);
+
+
+        /* -----------------------------
+        RIFIUTA TUTTO
+        ----------------------------- */
+
+        document
+            .getElementById("spisotti-consent-reject")
+            .addEventListener("click", function () {
+
+                setConsent("youtube", false);
+
+                banner.remove();
+
+            });
+
+
+        /* -----------------------------
+        SALVA PREFERENZE
+        ----------------------------- */
+
+        document
+            .getElementById("spisotti-consent-save")
+            .addEventListener("click", function () {
+
+                const youtube =
+                    document.getElementById(
+                        "spisotti-consent-youtube"
+                    ).checked;
+
+                setConsent(
+                    "youtube",
+                    youtube
+                );
+
+                banner.remove();
+
+            });
+
+
+        /* -----------------------------
+        ACCETTA TUTTO
+        ----------------------------- */
+
+        document
+            .getElementById("spisotti-consent-accept")
+            .addEventListener("click", function () {
+
+                setConsent("youtube", true);
+
+                banner.remove();
+
+            });
+
+    }
+
+    /* =====================================================
        API PUBBLICA
     ===================================================== */
 
@@ -216,6 +332,8 @@
         "DOMContentLoaded",
         function () {
             initYouTube();
+
+            showConsentBanner();
         }
     );
 
