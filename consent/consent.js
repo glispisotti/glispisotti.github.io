@@ -200,11 +200,21 @@
     BANNER CONSENSO
     ===================================================== */
 
-    function showConsentBanner() {
+    function showConsentBanner(force = false) {
 
-        // Se YouTube ha già una scelta,
-        // non dobbiamo mostrare il banner.
-        if (getServiceConsent("youtube") !== null) {
+        if (
+            !force &&
+            getServiceConsent("youtube") !== null
+        ) {
+            return;
+        }
+
+        // Evita di creare due banner contemporaneamente
+        if (
+            document.getElementById(
+                "spisotti-consent-banner"
+            )
+        ) {
             return;
         }
 
@@ -257,6 +267,13 @@
 
         document.body.appendChild(banner);
 
+        const youtubeCheckbox =
+            document.getElementById(
+                "spisotti-consent-youtube"
+            );
+
+        youtubeCheckbox.checked =
+            getServiceConsent("youtube") === true;
 
         /* -----------------------------
         RIFIUTA TUTTO
@@ -312,6 +329,27 @@
 
     }
 
+    function initConsentSettings() {
+
+        const button = document.getElementById(
+            "spisotti-consent-settings"
+        );
+
+        if (!button) {
+            return;
+        }
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                showConsentBanner(true);
+
+            }
+        );
+
+    }
+
     /* =====================================================
        API PUBBLICA
     ===================================================== */
@@ -334,6 +372,8 @@
             initYouTube();
 
             showConsentBanner();
+
+            initConsentSettings();
         }
     );
 
