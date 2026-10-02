@@ -141,11 +141,42 @@
 
                 } else {
 
-                    console.log(
-                        "Spisotti Consent: YouTube NON autorizzato."
+                    video.innerHTML = `
+                        <div class="spisotti-consent-placeholder">
+
+                            <p>
+                                Per visualizzare questo video è necessario
+                                consentire il caricamento di contenuti da YouTube.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="spisotti-consent-allow-youtube">
+                                Consenti YouTube e riproduci
+                            </button>
+
+                        </div>
+                    `;
+
+                    const allowButton = video.querySelector(
+                        ".spisotti-consent-allow-youtube"
                     );
 
-                } 
+                    allowButton.addEventListener("click", function () {
+
+                        setConsent(
+                            "youtube",
+                            true
+                        );
+
+                        loadYouTube(
+                            video,
+                            videoId
+                        );
+
+                    });
+
+                }
             });
 
         });
