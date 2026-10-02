@@ -77,6 +77,31 @@
     YOUTUBE
     ===================================================== */
 
+    function loadYouTube(video, videoId) {
+
+        const iframe = document.createElement("iframe");
+
+        iframe.src =
+            "https://www.youtube.com/embed/" +
+            videoId +
+            "?autoplay=1";
+
+        iframe.title = "Video YouTube";
+
+        iframe.allow =
+            "accelerometer; autoplay; clipboard-write; " +
+            "encrypted-media; gyroscope; picture-in-picture; web-share";
+
+        iframe.referrerPolicy =
+            "strict-origin-when-cross-origin";
+
+        iframe.allowFullscreen = true;
+
+        video.innerHTML = "";
+        video.appendChild(iframe);
+
+    }
+
     function initYouTube() {
 
         const videos = document.querySelectorAll(
@@ -109,8 +134,9 @@
 
                 if (hasConsent("youtube")) {
 
-                    console.log(
-                        "Spisotti Consent: YouTube autorizzato."
+                    loadYouTube(
+                        video,
+                        videoId
                     );
 
                 } else {
@@ -119,8 +145,7 @@
                         "Spisotti Consent: YouTube NON autorizzato."
                     );
 
-                }
-
+                } 
             });
 
         });
