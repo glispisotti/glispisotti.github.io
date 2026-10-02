@@ -16,12 +16,8 @@
 
 
     /*
-       Catalogo dei servizi che Spisotti Consent
-       è in grado di gestire.
-
-       ATTENZIONE:
-       questo NON significa che tutti questi servizi
-       siano utilizzati dal sito.
+       Catalogo generale dei servizi che
+       Spisotti Consent è in grado di gestire.
     */
 
     const SERVICES = {
@@ -40,16 +36,16 @@
     ===================================================== */
 
     /*
-       Ogni sito deve dichiarare i servizi che utilizza:
+       Il sito deve dichiarare i servizi utilizzati PRIMA
+       di caricare consent.js.
+
+       Esempio:
 
        window.SpisottiConsentConfig = {
            services: [
                "youtube"
            ]
        };
-
-       La configurazione deve essere dichiarata PRIMA
-       del caricamento di consent.js.
     */
 
     const CONFIG =
@@ -291,7 +287,8 @@
 
                 <button
                     type="button"
-                    class="spisotti-consent-allow-youtube">
+                    class="spisotti-consent-content-button
+                           spisotti-consent-allow-youtube">
 
                     Consenti YouTube e riproduci
 
@@ -330,11 +327,6 @@
 
 
     function initYouTube() {
-
-        /*
-           Se questo sito non utilizza YouTube,
-           non facciamo nulla.
-        */
 
         if (
             !ACTIVE_SERVICES.includes(
@@ -429,13 +421,6 @@
                     SERVICES[serviceId];
 
 
-                /*
-                   Se il sito dichiara un servizio
-                   che il manager non conosce,
-                   lo ignoriamo e segnaliamo
-                   il problema in console.
-                */
-
                 if (!service) {
 
                     console.warn(
@@ -453,11 +438,8 @@
                     <label
                         class="spisotti-consent-service">
 
-                        <input
-                            type="checkbox"
-                            data-consent-service="${serviceId}">
-
-                        <span>
+                        <span
+                            class="spisotti-consent-service-text">
 
                             <strong>
                                 ${service.name}
@@ -468,6 +450,11 @@
                             </span>
 
                         </span>
+
+
+                        <input
+                            type="checkbox"
+                            data-consent-service="${serviceId}">
 
                     </label>
 
@@ -483,17 +470,35 @@
 
 
     /* =====================================================
-       BANNER CONSENSO
+       CHIUSURA PANNELLO
+    ===================================================== */
+
+    function removeConsentPanel() {
+
+        const panel =
+            document.getElementById(
+                "spisotti-consent-banner"
+            );
+
+
+        if (panel) {
+            panel.remove();
+        }
+
+    }
+
+
+    /* =====================================================
+       PANNELLO INIZIALE COMPATTO
     ===================================================== */
 
     function showConsentBanner(
-        force = false
+        forcePreferences = false
     ) {
 
         /*
-           Se il sito non utilizza alcun servizio
-           soggetto al nostro consent manager,
-           il banner non deve comparire.
+           Nessun servizio configurato:
+           nessun pannello necessario.
         */
 
         if (
@@ -504,14 +509,13 @@
 
 
         /*
-           Se tutti i servizi hanno già
-           una scelta salvata,
-           non mostrare automaticamente
-           il banner.
+           Se non stiamo aprendo manualmente le preferenze
+           e tutte le scelte sono già state effettuate,
+           non mostrare nulla.
         */
 
         if (
-            !force &&
+            !forcePreferences &&
             !hasMissingConsent()
         ) {
             return;
@@ -519,16 +523,10 @@
 
 
         /*
-           Evita banner duplicati.
+           Evita pannelli duplicati.
         */
 
-        if (
-            document.getElementById(
-                "spisotti-consent-banner"
-            )
-        ) {
-            return;
-        }
+        removeConsentPanel();
 
 
         const banner =
@@ -541,6 +539,163 @@
             "spisotti-consent-banner";
 
 
+        banner.className =
+            "spisotti-consent-banner";
+
+
+        document.body.appendChild(
+            banner
+        );
+
+
+        if (forcePreferences) {
+
+            showPreferences(
+                banner
+            );
+
+        } else {
+
+            showCompactBanner(
+                banner
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       VISTA COMPATTA
+    ===================================================== */
+
+    function showCompactBanner(
+        banner
+    ) {
+
+        banner.innerHTML = `
+
+            <div
+                class="spisotti-consent-panel
+                       spisotti-consent-panel-compact">
+
+                <h2>
+                    Preferenze privacy
+                </h2>
+
+                <p>
+                    Alcuni contenuti esterni richiedono
+                    il tuo consenso prima di essere caricati.
+                </p>
+
+
+                <div
+                    class="spisotti-consent-actions
+                           spisotti-consent-actions-compact">
+
+                    <button
+                        type="button"
+                        class="spisotti-consent-button
+                               spisotti-consent-button-secondary"
+                        data-action="reject">
+
+                        Rifiuta
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="spisotti-consent-button
+                               spisotti-consent-button-secondary"
+                        data-action="preferences">
+
+                        Personalizza
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="spisotti-consent-button
+                               spisotti-consent-button-primary"
+                        data-action="accept">
+
+                        Accetta
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        /* RIFIUTA */
+
+        banner
+            .querySelector(
+                '[data-action="reject"]'
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    rejectAll();
+
+                    removeConsentPanel();
+
+                }
+            );
+
+
+        /* PERSONALIZZA */
+
+        banner
+            .querySelector(
+                '[data-action="preferences"]'
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    showPreferences(
+                        banner
+                    );
+
+                }
+            );
+
+
+        /* ACCETTA */
+
+        banner
+            .querySelector(
+                '[data-action="accept"]'
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    acceptAll();
+
+                    removeConsentPanel();
+
+                }
+            );
+
+    }
+
+
+    /* =====================================================
+       VISTA PREFERENZE
+    ===================================================== */
+
+    function showPreferences(
+        banner
+    ) {
+
         const servicesHtml =
             createServicesHtml();
 
@@ -548,16 +703,34 @@
         banner.innerHTML = `
 
             <div
-                class="spisotti-consent-banner-content">
+                class="spisotti-consent-panel
+                       spisotti-consent-panel-preferences">
 
-                <h2>
-                    Preferenze privacy
-                </h2>
+                <div
+                    class="spisotti-consent-header">
 
-                <p>
-                    Questo sito utilizza servizi esterni
-                    che possono comportare il trattamento
-                    di dati da parte di terze parti.
+                    <h2>
+                        Preferenze privacy
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="spisotti-consent-close"
+                        aria-label="Chiudi preferenze privacy">
+
+                        ×
+
+                    </button>
+
+                </div>
+
+
+                <p
+                    class="spisotti-consent-intro">
+
+                    Scegli quali servizi esterni
+                    possono essere caricati.
+
                 </p>
 
 
@@ -570,11 +743,13 @@
 
 
                 <div
-                    class="spisotti-consent-buttons">
+                    class="spisotti-consent-actions">
 
                     <button
                         type="button"
-                        id="spisotti-consent-reject">
+                        class="spisotti-consent-button
+                               spisotti-consent-button-secondary"
+                        data-action="reject">
 
                         Rifiuta tutto
 
@@ -583,7 +758,9 @@
 
                     <button
                         type="button"
-                        id="spisotti-consent-save">
+                        class="spisotti-consent-button
+                               spisotti-consent-button-primary"
+                        data-action="save">
 
                         Salva preferenze
 
@@ -592,7 +769,9 @@
 
                     <button
                         type="button"
-                        id="spisotti-consent-accept">
+                        class="spisotti-consent-button
+                               spisotti-consent-button-secondary"
+                        data-action="accept">
 
                         Accetta tutto
 
@@ -605,13 +784,8 @@
         `;
 
 
-        document.body.appendChild(
-            banner
-        );
-
-
         /* =================================================
-           CARICA PREFERENZE ESISTENTI
+           RIPRISTINA SCELTE ESISTENTI
         ================================================= */
 
         banner
@@ -636,12 +810,30 @@
 
 
         /* =================================================
+           CHIUDI
+        ================================================= */
+
+        banner
+            .querySelector(
+                ".spisotti-consent-close"
+            )
+            .addEventListener(
+                "click",
+                function () {
+
+                    removeConsentPanel();
+
+                }
+            );
+
+
+        /* =================================================
            RIFIUTA TUTTO
         ================================================= */
 
         banner
             .querySelector(
-                "#spisotti-consent-reject"
+                '[data-action="reject"]'
             )
             .addEventListener(
                 "click",
@@ -649,19 +841,19 @@
 
                     rejectAll();
 
-                    banner.remove();
+                    removeConsentPanel();
 
                 }
             );
 
 
         /* =================================================
-           SALVA PREFERENZE
+           SALVA
         ================================================= */
 
         banner
             .querySelector(
-                "#spisotti-consent-save"
+                '[data-action="save"]'
             )
             .addEventListener(
                 "click",
@@ -691,7 +883,7 @@
                         );
 
 
-                    banner.remove();
+                    removeConsentPanel();
 
                 }
             );
@@ -703,7 +895,7 @@
 
         banner
             .querySelector(
-                "#spisotti-consent-accept"
+                '[data-action="accept"]'
             )
             .addEventListener(
                 "click",
@@ -711,7 +903,7 @@
 
                     acceptAll();
 
-                    banner.remove();
+                    removeConsentPanel();
 
                 }
             );
@@ -720,7 +912,7 @@
 
 
     /* =====================================================
-       PULSANTE PREFERENZE PRIVACY
+       PULSANTE / LINK PREFERENZE NEL FOOTER
     ===================================================== */
 
     function initConsentSettings() {
@@ -738,7 +930,9 @@
 
         button.addEventListener(
             "click",
-            function () {
+            function (event) {
+
+                event.preventDefault();
 
                 showConsentBanner(
                     true
