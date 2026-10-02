@@ -339,7 +339,7 @@
 
         const videos =
             document.querySelectorAll(
-                ".spisotti-youtube"
+                ".spisotti-consent-youtube"
             );
 
 
