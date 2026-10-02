@@ -52,6 +52,19 @@
     /* =====================================================
        CONSENSO SINGOLO SERVIZIO
     ===================================================== */
+    function getServiceConsent(service) {
+
+        const consent = getConsent();
+
+        if (!(service in consent)) {
+            return null;
+        }
+
+        return consent[service] === true;
+
+    }
+
+
 
     function hasConsent(service) {
 
@@ -190,6 +203,8 @@
     window.SpisottiConsent = {
 
         get: getConsent,
+
+        status: getServiceConsent,
 
         has: hasConsent,
 
