@@ -99,6 +99,30 @@
                 videoId
             );
 
+            const button = video.querySelector("button");
+
+            if (!button) {
+                return;
+            }
+
+            button.addEventListener("click", function () {
+
+                if (hasConsent("youtube")) {
+
+                    console.log(
+                        "Spisotti Consent: YouTube autorizzato."
+                    );
+
+                } else {
+
+                    console.log(
+                        "Spisotti Consent: YouTube NON autorizzato."
+                    );
+
+                }
+
+            });
+
         });
 
     }
