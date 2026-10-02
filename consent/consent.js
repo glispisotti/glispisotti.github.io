@@ -596,7 +596,7 @@
                     <button
                         type="button"
                         class="spisotti-consent-button
-                               spisotti-consent-button-secondary"
+                               spisotti-consent-button-primary"
                         data-action="reject">
 
                         Rifiuta
@@ -607,7 +607,7 @@
                     <button
                         type="button"
                         class="spisotti-consent-button
-                               spisotti-consent-button-secondary"
+                               spisotti-consent-button-primary"
                         data-action="preferences">
 
                         Personalizza
