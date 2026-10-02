@@ -18,6 +18,9 @@
           content="{{ page.description | default: 'Gli Spisotti inventano giochi, sorprese, piccoli siti e cose fatte su misura per occasioni speciali.' }}">
 
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <link
+    rel="stylesheet"
+    href="/consent/consent.css">
 </head>
 
 <body>
@@ -32,5 +35,14 @@
     <!-- Cloudflare Web Analytics -->
     <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c4154236f2ff4d0090bdbbdc39d562c6"}'>
     </script><!-- End Cloudflare Web Analytics -->
+    <script>
+        window.SpisottiConsentConfig = {
+            services: [
+                "youtube"
+            ]
+        };
+    </script>
+
+    <script src="https://glispisotti.github.io/consent/consent.js"></script>
 </body>
 </html>
