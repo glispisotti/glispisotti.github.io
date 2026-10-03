@@ -237,7 +237,7 @@
 
 
         iframe.src =
-            "https://www.youtube.com/embed/" +
+            "https://www.youtube-nocookie.com/embed/" +
             videoId +
             "?autoplay=1";
 
