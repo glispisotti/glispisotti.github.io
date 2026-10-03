@@ -1,5 +1,6 @@
 /* =========================================================
    SPISOTTI CONSENT
+
    Gestione consensi per servizi esterni
 ========================================================= */
 
@@ -42,6 +43,7 @@
        Esempio:
 
        window.SpisottiConsentConfig = {
+           version: 1,
            services: [
                "youtube"
            ]
@@ -50,6 +52,10 @@
 
     const CONFIG =
         window.SpisottiConsentConfig || {};
+
+
+    const CONFIG_VERSION =
+        CONFIG.version || 1;
 
 
     const ACTIVE_SERVICES =
@@ -77,7 +83,93 @@
 
         try {
 
-            return JSON.parse(saved);
+            const consent =
+                JSON.parse(saved);
+
+
+            /*
+               Vecchio formato:
+               mancano timestamp o versione.
+
+               Non possiamo sapere quando sia stata
+               effettuata la scelta, quindi viene
+               considerata non più valida.
+            */
+
+            if (
+                !consent._timestamp ||
+                consent._version === undefined
+            ) {
+
+                localStorage.removeItem(
+                    STORAGE_KEY
+                );
+
+                return {};
+
+            }
+
+
+            /*
+               La configurazione del sito è cambiata.
+            */
+
+            if (
+                consent._version !==
+                CONFIG_VERSION
+            ) {
+
+                localStorage.removeItem(
+                    STORAGE_KEY
+                );
+
+                return {};
+
+            }
+
+
+            /*
+               Calcola la scadenza:
+               6 mesi di calendario dalla scelta.
+            */
+
+            const consentDate =
+                new Date(
+                    consent._timestamp
+                );
+
+
+            const expirationDate =
+                new Date(
+                    consentDate
+                );
+
+
+            expirationDate.setMonth(
+                expirationDate.getMonth() + 6
+            );
+
+
+            /*
+               Consenso scaduto.
+            */
+
+            if (
+                new Date() >=
+                expirationDate
+            ) {
+
+                localStorage.removeItem(
+                    STORAGE_KEY
+                );
+
+                return {};
+
+            }
+
+
+            return consent;
+
 
         } catch (error) {
 
@@ -85,6 +177,12 @@
                 "Spisotti Consent: impossibile leggere i consensi salvati.",
                 error
             );
+
+
+            localStorage.removeItem(
+                STORAGE_KEY
+            );
+
 
             return {};
 
@@ -98,6 +196,14 @@
     ===================================================== */
 
     function saveConsent(consent) {
+
+        consent._timestamp =
+            Date.now();
+
+
+        consent._version =
+            CONFIG_VERSION;
+
 
         localStorage.setItem(
             STORAGE_KEY,
@@ -859,6 +965,10 @@
                 "click",
                 function () {
 
+                    const consent =
+                        getConsent();
+
+
                     banner
                         .querySelectorAll(
                             "[data-consent-service]"
@@ -874,13 +984,16 @@
                                         .consentService;
 
 
-                                setConsent(
-                                    service,
-                                    checkbox.checked
-                                );
+                                consent[service] =
+                                    checkbox.checked;
 
                             }
                         );
+
+
+                    saveConsent(
+                        consent
+                    );
 
 
                     removeConsentPanel();
@@ -933,6 +1046,7 @@
             function (event) {
 
                 event.preventDefault();
+
 
                 showConsentBanner(
                     true
