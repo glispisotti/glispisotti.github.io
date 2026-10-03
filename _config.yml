@@ -11,3 +11,25 @@ collections:
   progetti:
     output: true
     permalink: /progetti/:slug/
+
+consent:
+
+  # Versione del sistema/informativa
+  version: "1.0"
+
+  # Dati del titolare
+  privacy:
+    titolare: "Laura Porceddu"
+    sede: ""
+    email: "glispisotti@gmail.com"
+    pec: ""
+
+  hosting:
+    provider: "GitHub Pages"
+    privacy_url: "https://docs.github.com/it/site-policy/privacy-policies/github-general-privacy-statement"
+
+  # Servizi utilizzati dal sito
+  services:
+    analytics: true
+    youtube: true
+    maps: true
