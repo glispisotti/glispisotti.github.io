@@ -739,6 +739,35 @@
         }
 
         /*
+            Carica il CSS di Brevo
+            solo dopo il consenso.
+        */
+
+        if (
+            !document.getElementById(
+                "spisotti-consent-brevo-css"
+            )
+        ) {
+
+            const brevoCss =
+                document.createElement("link");
+
+            brevoCss.id =
+                "spisotti-consent-brevo-css";
+
+            brevoCss.rel =
+                "stylesheet";
+
+            brevoCss.href =
+                "https://sibforms.com/forms/end-form/build/sib-styles.css";
+
+            document.head.appendChild(
+                brevoCss
+            );
+
+        }
+
+        /*
         Crea il contenitore del modulo reale.
         */
 
@@ -1488,5 +1517,3 @@
 
 
 })();
-
-/*forse*/
