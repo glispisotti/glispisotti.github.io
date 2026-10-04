@@ -35,6 +35,12 @@
             description: "Mappe interattive fornite da Google Maps"
         }
 
+        brevo: {
+            name: "Brevo",
+            category: "external",
+            description: "Modulo di iscrizione alla newsletter"
+        }
+
     };
 
 
@@ -698,6 +704,161 @@
     }
 
     /* =====================================================
+    BREVO
+    ===================================================== */
+
+    function loadBrevo() {
+
+        const fakeModule =
+            document.querySelector(
+                ".spisotti-consent-brevo"
+            );
+
+        const template =
+            document.getElementById(
+                "spisotti-consent-brevo-template"
+            );
+
+        if (!template) {
+            console.warn(
+                "Spisotti Consent: template Brevo non trovato."
+            );
+            return;
+        }
+
+        /*
+        Evita di caricare il modulo più volte.
+        */
+
+        if (
+            document.getElementById(
+                "spisotti-consent-brevo-real"
+            )
+        ) {
+            return;
+        }
+
+        /*
+        Crea il contenitore del modulo reale.
+        */
+
+        const realModule =
+            document.createElement("div");
+
+        realModule.id =
+            "spisotti-consent-brevo-real";
+
+        /*
+        Copia il contenuto del template.
+        */
+
+        realModule.appendChild(
+            template.content.cloneNode(true)
+        );
+
+        /*
+        Inserisce il modulo reale
+        subito dopo il facsimile.
+        */
+
+        if (fakeModule) {
+
+            fakeModule.insertAdjacentElement(
+                "afterend",
+                realModule
+            );
+
+            /*
+            Nasconde facsimile + finestra consenso.
+            */
+
+            fakeModule.style.display =
+                "none";
+
+        } else {
+
+            template.insertAdjacentElement(
+                "beforebegin",
+                realModule
+            );
+
+        }
+
+    }
+
+    function initBrevo() {
+
+        if (
+            !ACTIVE_SERVICES.includes(
+                "brevo"
+            )
+        ) {
+            return;
+        }
+
+        const fakeModule =
+            document.querySelector(
+                ".spisotti-consent-brevo"
+            );
+
+        const template =
+            document.getElementById(
+                "spisotti-consent-brevo-template"
+            );
+
+        /*
+        Se questa pagina non contiene
+        un modulo Brevo, non fare nulla.
+        */
+
+        if (!fakeModule || !template) {
+            return;
+        }
+
+        /*
+        Se Brevo è già stato autorizzato
+        in precedenza, mostra subito
+        il modulo reale.
+        */
+
+        if (hasConsent("brevo")) {
+
+            loadBrevo();
+            return;
+
+        }
+
+        /*
+        Altrimenti collega il pulsante
+        "Consenti e visualizza".
+        */
+
+        const allowButton =
+            fakeModule.querySelector(
+                ".spisotti-consent-allow-brevo"
+            );
+
+        if (!allowButton) {
+            return;
+        }
+
+        allowButton.addEventListener(
+            "click",
+            function () {
+
+                setConsent(
+                    "brevo",
+                    true
+                );
+
+                loadBrevo();
+
+            }
+        );
+
+    }
+
+    /* =====================================================
        GENERAZIONE ELENCO SERVIZI
     ===================================================== */
 
@@ -1314,6 +1475,8 @@
             initYouTube();
 
             initGoogleMaps();
+
+            initBrevo();
 
             showConsentBanner();
 
