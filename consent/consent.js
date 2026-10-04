@@ -312,6 +312,17 @@
 
         saveConsent(consent);
 
+        /*
+            Attiva subito Brevo se presente
+            nella pagina.
+        */
+
+        if (
+            ACTIVE_SERVICES.includes("brevo")
+        ) {
+            loadBrevo();
+        }
+
     }
 
 
