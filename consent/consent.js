@@ -813,6 +813,32 @@
 
         }
 
+        /*
+            Carica lo script principale di Brevo
+            solo dopo il consenso.
+        */
+
+        if (
+            !document.getElementById(
+                "spisotti-consent-brevo-script"
+            )
+        ) {
+
+            const brevoScript =
+                document.createElement("script");
+
+            brevoScript.id =
+                "spisotti-consent-brevo-script";
+
+            brevoScript.src =
+                "https://sibforms.com/forms/end-form/build/main.js";
+
+            document.body.appendChild(
+                brevoScript
+            );
+
+        }
+
     }
 
     function initBrevo() {
