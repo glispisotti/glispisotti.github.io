@@ -792,17 +792,14 @@
 
         if (fakeModule) {
 
-            fakeModule.insertAdjacentElement(
-                "afterend",
-                realModule
-            );
-
             /*
-            Nasconde facsimile + finestra consenso.
+                Sostituisce il facsimile con
+                il modulo Brevo reale.
             */
 
-            fakeModule.style.display =
-                "none";
+            fakeModule.replaceWith(
+                realModule
+            );
 
         } else {
 
