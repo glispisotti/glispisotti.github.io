@@ -836,6 +836,32 @@
 
         }
 
+        /*
+            Carica Google reCAPTCHA
+            solo dopo il consenso a Brevo.
+        */
+
+        if (
+            !document.getElementById(
+                "spisotti-consent-recaptcha-script"
+            )
+        ) {
+
+            const recaptchaScript =
+                document.createElement("script");
+
+            recaptchaScript.id =
+                "spisotti-consent-recaptcha-script";
+
+            recaptchaScript.src =
+                "https://www.google.com/recaptcha/api.js?hl=it";
+
+            document.body.appendChild(
+                recaptchaScript
+            );
+
+        }
+
     }
 
     function initBrevo() {
