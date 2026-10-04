@@ -875,10 +875,18 @@
                     Preferenze privacy
                 </h2>
 
-                <p>
-                    Alcuni contenuti esterni richiedono
-                    il tuo consenso prima di essere caricati.
+                <p class="spisotti-consent-text">
+                    Alcuni contenuti esterni richiedono il tuo consenso
+                    prima di essere caricati.
                 </p>
+
+                <a
+                    href="/privacy.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="spisotti-consent-privacy-link">
+                    Informativa privacy
+                </a>
 
 
                 <div
@@ -1031,9 +1039,10 @@
 
                     Alcuni contenuti esterni richiedono
                     il tuo consenso prima di essere caricati.
-                    <a
-                        href="/privacy.html"
-                        class="spisotti-consent-privacy-link">
+                    <a href="/privacy.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="spisotti-consent-privacy-link">
                         Informativa privacy
                     </a>
 
