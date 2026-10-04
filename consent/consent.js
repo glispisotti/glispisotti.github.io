@@ -1455,6 +1455,19 @@
                     );
 
 
+                    /*
+                        Attiva subito Brevo se è stato
+                        autorizzato nelle preferenze.
+                    */
+
+                    if (
+                        consent.brevo === true &&
+                        ACTIVE_SERVICES.includes("brevo")
+                    ) {
+                        loadBrevo();
+                    }
+
+
                     removeConsentPanel();
 
                 }
