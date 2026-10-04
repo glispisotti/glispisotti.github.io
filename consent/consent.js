@@ -33,7 +33,7 @@
             name: "Google Maps",
             category: "external",
             description: "Mappe interattive fornite da Google Maps"
-        }
+        },
 
         brevo: {
             name: "Brevo",
