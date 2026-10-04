@@ -27,6 +27,12 @@
             name: "YouTube",
             category: "external",
             description: "Video incorporati da YouTube"
+        },
+
+        googlemaps: {
+            name: "Google Maps",
+            category: "external",
+            description: "Mappe interattive fornite da Google Maps"
         }
 
     };
@@ -512,6 +518,186 @@
 
 
     /* =====================================================
+    GOOGLE MAPS
+    ===================================================== */
+
+    function loadGoogleMaps(
+        map,
+        mapUrl
+    ) {
+
+        const iframe =
+            document.createElement(
+                "iframe"
+            );
+
+
+        iframe.src =
+            mapUrl;
+
+
+        iframe.title =
+            "Google Maps";
+
+
+        iframe.loading =
+            "lazy";
+
+
+        iframe.referrerPolicy =
+            "no-referrer-when-downgrade";
+
+
+        iframe.allowFullscreen =
+            true;
+
+
+        map.innerHTML =
+            "";
+
+
+        map.appendChild(
+            iframe
+        );
+
+    }
+
+
+    function showGoogleMapsConsent(
+        map,
+        mapUrl
+    ) {
+
+        map.innerHTML = `
+
+            <div
+                class="spisotti-consent-placeholder">
+
+                <p>
+                    Per visualizzare questa mappa è necessario
+                    consentire il caricamento di contenuti da Google Maps.
+                </p>
+
+                <button
+                    type="button"
+                    class="spisotti-consent-content-button
+                        spisotti-consent-allow-googlemaps">
+
+                    Consenti Google Maps e visualizza
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        const allowButton =
+            map.querySelector(
+                ".spisotti-consent-allow-googlemaps"
+            );
+
+
+        allowButton.addEventListener(
+            "click",
+            function () {
+
+                setConsent(
+                    "googlemaps",
+                    true
+                );
+
+
+                loadGoogleMaps(
+                    map,
+                    mapUrl
+                );
+
+            }
+        );
+
+    }
+
+
+    function initGoogleMaps() {
+
+        if (
+            !ACTIVE_SERVICES.includes(
+                "googlemaps"
+            )
+        ) {
+            return;
+        }
+
+
+        const maps =
+            document.querySelectorAll(
+                ".spisotti-consent-googlemaps"
+            );
+
+
+        maps.forEach(
+            function (map) {
+
+                const mapUrl =
+                    map.dataset.map;
+
+
+                if (!mapUrl) {
+
+                    console.warn(
+                        "Spisotti Consent: mappa Google Maps senza data-map."
+                    );
+
+                    return;
+
+                }
+
+
+                const button =
+                    map.querySelector(
+                        "button"
+                    );
+
+
+                if (!button) {
+                    return;
+                }
+
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        if (
+                            hasConsent(
+                                "googlemaps"
+                            )
+                        ) {
+
+                            loadGoogleMaps(
+                                map,
+                                mapUrl
+                            );
+
+                        } else {
+
+                            showGoogleMapsConsent(
+                                map,
+                                mapUrl
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+    /* =====================================================
        GENERAZIONE ELENCO SERVIZI
     ===================================================== */
 
@@ -840,6 +1026,20 @@
                 </p>
 
 
+                <p
+                    class="spisotti-consent-intro">
+
+                    Alcuni contenuti esterni richiedono
+                    il tuo consenso prima di essere caricati.
+                    <a
+                        href="/privacy.html"
+                        class="spisotti-consent-privacy-link">
+                        Informativa privacy
+                    </a>
+
+                </p>
+
+
                 <div
                     class="spisotti-consent-services">
 
@@ -1104,9 +1304,12 @@
 
             initYouTube();
 
+            initGoogleMaps();
+
             showConsentBanner();
 
             initConsentSettings();
+
 
         }
     );

@@ -585,3 +585,8 @@
     }
 
 }
+
+.spisotti-consent-privacy-link {
+    color: inherit;
+    text-decoration: underline;
+}
